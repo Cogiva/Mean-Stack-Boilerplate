@@ -3,8 +3,9 @@
 
 class UserhomeComponent {
 
-  constructor($scope) {
-    this.message = 'Hello';
+  constructor($scope, Auth) {
+    this.message = 'Hello';  
+    this.user    = Auth.getCurrentUser();  
   }
 
 }

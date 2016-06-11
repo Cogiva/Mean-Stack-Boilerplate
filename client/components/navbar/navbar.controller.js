@@ -3,7 +3,7 @@
 class NavbarController {
   //end-non-standard
 
-  //start-non-standard
+  //start-non-standard 
   constructor($location, Auth) {
     this.$location = $location;
     this.isLoggedIn = Auth.isLoggedIn;

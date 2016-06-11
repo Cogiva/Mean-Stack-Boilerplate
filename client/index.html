@@ -25,6 +25,7 @@
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="app/userhome/userhome.css">
       <link rel="stylesheet" href="components/footer/footer.css">
+      <link rel="stylesheet" href="components/header/header.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <link rel="stylesheet" href="components/oauth-buttons/oauth-buttons.css">
       <!-- endinjector -->
@@ -55,8 +56,16 @@
 
     <!-- Add your site or application content here -->
     <navbar></navbar>
-    <div ng-view=""></div>
-    <footer></footer>
+    
+    <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+    <label for="nav-trigger"></label>
+
+    <div class="site-wrap"> 
+        <header></header>
+        <div ng-view=""></div>
+        <footer></footer>
+        <!-- insert the rest of your page markup here -->
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -94,7 +103,7 @@
       <script src="app/admin/admin.module.js"></script>
       <script src="components/auth/auth.module.js"></script>
       <script src="components/util/util.module.js"></script>
-      <script src="components/auth/auth.service.js"></script>
+      <script src="components/auth/interceptor.service.js"></script>
       <script src="app/admin/admin.controller.js"></script>
       <script src="app/account/account.js"></script>
       <script src="app/admin/admin.router.js"></script>
@@ -104,11 +113,13 @@
       <script src="app/userhome/userhome.controller.js"></script>
       <script src="app/userhome/userhome.js"></script>
       <script src="app/account/settings/settings.controller.js"></script>
+      <script src="components/auth/auth.service.js"></script>
       <script src="app/account/login/login.controller.js"></script>
-      <script src="components/auth/interceptor.service.js"></script>
       <script src="components/auth/router.decorator.js"></script>
       <script src="components/auth/user.service.js"></script>
       <script src="components/footer/footer.directive.js"></script>
+      <script src="components/header/header.controller.js"></script>
+      <script src="components/header/header.directive.js"></script>
       <script src="components/modal/modal.service.js"></script>
       <script src="components/mongoose-error/mongoose-error.directive.js"></script>
       <script src="components/navbar/navbar.controller.js"></script>

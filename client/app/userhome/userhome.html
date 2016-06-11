@@ -1,1 +1,10 @@
-<div>This is the userhome view: {{message}}</div>
+<div class="container">
+  	<div class="row">
+    	<div class="col-sm-12">
+			<div>This is the userhome view: {{$ctrl.message}}</div>
+			<div><b>Name:</b> {{$ctrl.user.name}}</div>
+			<div><b>Email:</b> {{$ctrl.user.email}}</div>
+			<div><b>Role:</b> {{$ctrl.user.role}}</div>
+		</div>
+	</div>
+</div>
