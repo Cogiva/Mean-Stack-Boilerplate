@@ -1,11 +1,9 @@
 <ul class="navigation">
-    <li class="nav-item" ng-repeat="item in nav.menu" ng-class="{active: nav.isActive(item.link)}">
-        <a ng-href="{{item.link}}">{{item.title}}</a>
-    </li>
-    <li class="nav-item" ng-show="nav.isAdmin()" ng-class="{active: nav.isActive('/admin')}"><a href="/admin">Admin</a></li>
-    <li class="nav-item" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/signup')}"><a href="/signup">Register</a></li>
-    <li class="nav-item" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/login')}"><a href="/login">Login</a></li>
-    <li class="nav-item" ng-show="nav.isLoggedIn()"><p class="navbar-text">Hello {{ nav.getCurrentUser().name }}</p> </li>
-    <li class="nav-item" ng-show="nav.isLoggedIn()" ng-class="{active: nav.isActive('/settings')}"><a href="/settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-    <li class="nav-item" ng-show="nav.isLoggedIn()"><a href="/logout">Logout</a></li>
+    <li class="nav-item" ng-show="nav.isAdmin()" ng-class="{active: nav.isActive('/admin')}"><a href="/admin" ng-click="nav.common.toggleMenu()"><span class="glyphicon glyphicon-education"></span>&nbsp;&nbsp;Admin</a></li>
+    <li class="nav-item" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/')}"><a href="/" ng-click="nav.common.toggleMenu()"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+    <li class="nav-item" ng-show="nav.isLoggedIn()" ng-class="{active: nav.isActive('/userhome')}"><a href="/userhome" ng-click="nav.common.toggleMenu()"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;Home</a></li>
+    <li class="nav-item" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/signup')}"><a href="/signup" ng-click="nav.common.toggleMenu()"><span class="glyphicon glyphicon-pencil"></span>&nbsp;&nbsp;Register</a></li>
+    <li class="nav-item" ng-hide="nav.isLoggedIn()" ng-class="{active: nav.isActive('/login')}"><a href="/login" ng-click="nav.common.toggleMenu()"><span class="glyphicon glyphicon-log-in"></span>&nbsp;&nbsp;Login</a></li>
+    <li class="nav-item" ng-show="nav.isLoggedIn()" ng-class="{active: nav.isActive('/settings')}"><a href="/settings" ng-click="nav.common.toggleMenu()"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Settings</a></li>
+    <li class="nav-item" ng-show="nav.isLoggedIn()"><a href="/logout" ng-click="nav.common.toggleMenu()"><span class="glyphicon glyphicon-log-out"></span>&nbsp;&nbsp;Logout</a></li>
 </ul>

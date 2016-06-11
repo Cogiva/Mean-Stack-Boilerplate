@@ -1,13 +1,16 @@
 'use strict';
 
 class LoginController {
-  constructor(Auth, $location) {
+  constructor(Auth, $location, common) {
     this.user = {};
     this.errors = {};
     this.submitted = false;
+    this.common = common;
 
     this.Auth = Auth;
     this.$location = $location;
+    common.setPageTitle("Login.");
+    common.toggleMenu(false);
   }
 
   login(form) {

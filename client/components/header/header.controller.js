@@ -4,8 +4,9 @@ class HeaderController {
   //end-non-standard
 
   //start-non-standard 
-  constructor($location, Auth) {
+  constructor(common) {
     this.title = "Header.";
+    this.common = common;
   }
 }
 

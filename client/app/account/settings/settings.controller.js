@@ -2,8 +2,11 @@
 
 class SettingsController {
 
-  constructor(Auth) {
+  constructor(Auth, common) {
     this.Auth = Auth;
+    this.common = common;
+    common.setPageTitle("Settings.")
+    common.toggleMenu(false);
   }
 
   changePassword(form) {

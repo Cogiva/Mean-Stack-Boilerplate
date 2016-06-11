@@ -1,0 +1,16 @@
+<div class="row alert" ng-show="alerts.common.getAlerting()" ng-class="alerts.common.getAlertClass()">
+	<div class="alertContainer" >
+		<h2>{{alerts.common.getAlertTitle()}}</h2>
+		<h5>{{alerts.common.getAlertMessage()}}</h5>
+		<div>
+        	<button class="btn btn-primary dismiss" ng-click="alerts.common.dismissAlert()" ng-show="alerts.common.getAlertButton()">Dismiss</button>
+		</div>
+	</div>
+</div>
+
+<div class="row loading" class="loading" ng-show="alerts.common.getLoading()">
+	<div class="alertContainer" >
+		<div class='uil-ball-css' style='-webkit-transform:scale(0.6)'><div></div></div>
+		<h3>Loading...</h3>
+	</div>
+</div>

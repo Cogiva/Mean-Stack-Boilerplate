@@ -3,9 +3,12 @@
 
 class UserhomeComponent {
 
-  constructor($scope, Auth) {
+  constructor($scope, Auth, common) {
     this.message = 'Hello';  
     this.user    = Auth.getCurrentUser();  
+    this.common = common;
+    common.setPageTitle(this.user.name);
+    common.toggleMenu(false);
   }
 
 }

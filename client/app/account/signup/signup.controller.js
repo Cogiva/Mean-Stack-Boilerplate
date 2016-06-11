@@ -3,9 +3,12 @@
 class SignupController {
   //end-non-standard
 
-  constructor(Auth, $location) {
+  constructor(Auth, $location, common) {
       this.Auth = Auth;
       this.$location = $location;
+      this.common = common;
+      common.setPageTitle("Register.");
+      common.toggleMenu(false);
     }
     //start-non-standard
 
