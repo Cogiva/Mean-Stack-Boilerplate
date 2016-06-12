@@ -8,7 +8,7 @@ class NavbarController {
     this.$location = $location;
     this.isLoggedIn = Auth.isLoggedIn;
     this.isAdmin = Auth.isAdmin;
-    this.getCurrentUser = Auth.getCurrentUser;
+    this.Auth = Auth;
     this.common = common;
   }
 

@@ -100,6 +100,44 @@ export function changePassword(req, res, next) {
 }
 
 /**
+ * Change a users profile image
+ */
+export function updateImage(req, res, next) {
+  var userId = req.user._id;
+  var newImage = String(req.body.profileimage);
+
+  return User.findById(userId).exec()
+    .then(user => {
+      user.profileimage = newImage;
+      return user.save()
+        .then(() => {
+          res.status(204).end();
+        })
+        .catch(validationError(res));
+    });
+}
+
+/**
+ * Change a users profile
+ */
+export function updateProfile(req, res, next) {
+  var userId = req.user._id;
+  var newName = String(req.body.newName);
+  var newEmail = String(req.body.newEmail);
+
+  return User.findById(userId).exec()
+    .then(user => {
+      user.name = newName;
+      user.email = newEmail;
+      return user.save()
+        .then(() => {
+          res.status(204).end();
+        })
+        .catch(validationError(res));
+    });
+}
+
+/**
  * Get my info
  */
 export function me(req, res, next) {

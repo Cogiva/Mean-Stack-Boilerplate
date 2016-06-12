@@ -3,9 +3,11 @@
 (function() {
 
   class AdminController {
-    constructor(User) {
+    constructor(User, common) {
       // Use the User $resource to fetch all users
       this.users = User.query();
+      this.common = common;
+      common.setPageTitle("Admin");
     }
 
     delete(user) {

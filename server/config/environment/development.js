@@ -6,7 +6,7 @@ module.exports = {
 
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/hapnote-dev'
+    uri: 'mongodb://localhost/hapnote'
   },
 
   // Seed database on startup

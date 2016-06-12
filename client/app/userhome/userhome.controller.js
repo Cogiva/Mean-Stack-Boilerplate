@@ -4,10 +4,9 @@
 class UserhomeComponent {
 
   constructor($scope, Auth, common) {
-    this.message = 'Hello';  
-    this.user    = Auth.getCurrentUser();  
     this.common = common;
-    common.setPageTitle(this.user.name);
+    this.Auth = Auth;
+    common.setPageTitle("Tasks");
     common.toggleMenu(false);
   }
 

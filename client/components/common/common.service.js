@@ -5,7 +5,7 @@ angular.module('hapnoteApp')
     // AngularJS will instantiate a singleton by calling "new" on this function
     var pageTitle = "Hapnote.";
     var loading = false;
-    var alerting = true;
+    var alerting = false;
     var alertTitle = "Alert.";
     var alertMessage = "Some message goes here...";
     var alertButton = true;

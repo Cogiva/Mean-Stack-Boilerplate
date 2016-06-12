@@ -94,6 +94,48 @@
       },
 
       /**
+       * Update image
+       *     
+       * @param  {String/Binary}   newImage
+       * @param  {Function} callback    - optional, function(error, user)
+       * @return {Promise}
+       */
+      updateImage(newImage, callback) {
+        return User.updateImage({
+            id: currentUser._id
+          }, {
+            profileimage: newImage
+          }, function() {
+            return safeCb(callback)(null);
+          }, function(err) {
+            return safeCb(callback)(err);
+          })
+          .$promise;
+      },
+
+      /**
+       * Update image
+       *     
+       * @param  {String/Binary}   newImage
+       * @param  {Function} callback    - optional, function(error, user)
+       * @return {Promise}
+       */
+      updateProfile(newName, newEmail, callback) {
+        console.log("sending profile...");
+        return User.updateProfile({
+            id: currentUser._id
+          }, {
+            newName: newName,
+            newEmail: newEmail
+          }, function() {
+            return safeCb(callback)(null);
+          }, function(err) {
+            return safeCb(callback)(err);
+          })
+          .$promise;
+      },
+
+      /**
        * Gets all available info on a user
        *   (synchronous|asynchronous)
        *

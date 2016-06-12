@@ -12,6 +12,18 @@
           controller: 'password'
         }
       },
+      updateImage: {
+        method: 'PUT',
+        params: {
+          controller: 'image'
+        }
+      },
+      updateProfile: {
+        method: 'PUT',
+        params: {
+          controller: 'profile'
+        }
+      },
       get: {
         method: 'GET',
         params: {
