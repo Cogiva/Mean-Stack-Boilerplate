@@ -9,6 +9,7 @@ div.row.loading {
 	text-align: center;
 	z-index: 100;
 	padding: 30px;
+	position: fixed;
 }
 
 div.row.alert {
@@ -21,6 +22,7 @@ div.row.alert {
 	left: 0px;
 	text-align: center;
 	z-index: 50;
+	position: fixed;
 }
 
 div.row.alert.success {
