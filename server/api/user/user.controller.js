@@ -111,7 +111,7 @@ export function updateImage(req, res, next) {
       user.profileimage = newImage;
       return user.save()
         .then(() => {
-          res.status(204).end();
+          return res.status(204).end();
         })
         .catch(validationError(res));
     });
@@ -148,7 +148,7 @@ export function me(req, res, next) {
       if (!user) {
         return res.status(401).end();
       }
-      res.json(user);
+      return res.json(user);
     })
     .catch(err => next(err));
 }
@@ -157,5 +157,5 @@ export function me(req, res, next) {
  * Authentication callback
  */
 export function authCallback(req, res, next) {
-  res.redirect('/');
+  return res.redirect('/');
 }

@@ -1,6 +1,11 @@
-# hapnote
+# MEANStack Boilerplate
 
-This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.7.5.
+This project was generated with the [Angular Full-Stack Generator](https://github.com/DaftMonk/generator-angular-fullstack) version 3.7.5. 
+
+Additions in this boilerplate include:
+- Profile image and profile (name / email) updates added to settings
+- Layout built for mobile with side menu.
+- Bootstrap updated for bolder square buttons. 
 
 ## Getting Started
 
